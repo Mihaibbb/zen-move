@@ -9,7 +9,7 @@ import { useState } from "react";
 const SelectAutomobile = ({ route, navigation }) => {
 
     const [searchInput, setSearchInput] = useState("");
-
+    
     return (
         <View style={styles.container}>
 
