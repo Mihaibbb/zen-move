@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "smart-public-transport",
+    "slug": "smart-public-transport",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
