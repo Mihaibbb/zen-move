@@ -15,7 +15,7 @@ const mainColors = {
     purple2: 'rgb(132,124,255)',
     purpleBackground: 'rgba(161, 150, 255, .2)',
 
-    backgroundColor: '#3F4673'
+    backgroundColor: 'rgb(25,26,40)'
 };
 
 export default mainColors;
