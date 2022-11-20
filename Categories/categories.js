@@ -7,7 +7,8 @@ const Categories = [
         name: "Bus",
         lightColor: "blue",
         darkColor: "blue2",
-        icon: <Ionicons name="bus-outline" size={50} color='#fff' style={styles.categoryIcon} />
+        icon: <Ionicons name="bus-outline" size={50} color='#fff' style={styles.categoryIcon} />,
+        smIcon: <Ionicons name="bus-outline" size={35} color='rgba(255, 255, 255, .7)' style={styles.categoryIcon} />
     },
 
     {

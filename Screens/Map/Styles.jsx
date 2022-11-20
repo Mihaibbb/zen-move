@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(0, 0, 0, .6)',
         padding: 15,
         marginTop: 15,
-        borderRadius: 35
+        borderRadius: 35,
+        borderWidth: 2,
     },
 
     searchbarIcon: {
@@ -62,8 +63,27 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         marginVertical: 10,
         alignItems: "center",
-        borderBottomWidth: 3,
-        borderBottomColor: "rgba(0, 0, 0, .3)"
+       
+      
+    },
+
+    closeRouteCard: {
+        width: "100%",
+        marginVertical: 35,
+        borderRadius: 25,
+        padding: 15
+    },
+
+    closeRouteName: {
+        flexDirection: "row",
+        alignItems: "center"
+    },
+
+    closeRouteText: {
+        color: "#fff",
+        fontWeight: "bold",
+        marginLeft: 10,
+        fontSize: 18
     },
 
     data: {
@@ -72,12 +92,15 @@ const styles = StyleSheet.create({
 
     goButton: {
         flex: 0.2,
-        backgroundColor: "green",
-        width: 50,
-        height: 50,
+        backgroundColor: mainColors.backgroundColor,
+       
+       
         borderRadius: 15,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        padding: 8,
+        height: 65,
+        width: 50
     },
 
     hugeText: {
@@ -87,9 +110,10 @@ const styles = StyleSheet.create({
     },
 
     dataText: {
-        fontSize: 22,
+        fontSize: 18,
         color: "#fff",
-        marginVertical: 15
+        marginVertical: 10,
+        fontWeight: "500"
     }
 });
 
