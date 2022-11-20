@@ -79,6 +79,7 @@ const Map = ({ route, navigation }) => {
         if (!location) return;
         setLatitude(location.coords.latitude);
         setLongitude(location?.coords?.longitude);
+        
         setCloseRoutes([
             {
                 timeRemained: 22700,
@@ -141,7 +142,33 @@ const Map = ({ route, navigation }) => {
 
             }
         ]);
+
+        (async () => {
+            const options = {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    initLat: location.coords.latitude,
+                    initLng: location.coords.longitude,
+                    finalLat: location.coords.latitude + 0.05,
+                    finalLng: location.coords.longitude - 0.025
+                })
+            };
+            try {
+                const request = await fetch(`http://172.20.10.5:8000/pedestrial/calculate-distance`, options);
+                const response = await request.json();
+                console.log(await response);
+            } catch (e) {
+                console.log(e);
+            }
+
+           
+        })();
     }, [location]);
+
+    const categorySmIcon = Categories.find(vehicleCat => vehicleCat.name.toLowerCase() === vehicle.toLowerCase()).smIcon;
 
     return (
         <View style={styles.container}>
@@ -184,7 +211,7 @@ const Map = ({ route, navigation }) => {
                                 })} key={idx}>
 
                                 <LinearGradient style={styles.pinGradient} colors={[color1, color2]}>
-                                    <Feather name="map-pin" size={26} color='#fff' />
+                                    {categorySmIcon}
 
                                 </LinearGradient>
                             </TouchableOpacity>
@@ -230,7 +257,7 @@ const Map = ({ route, navigation }) => {
                             <LinearGradient key={idx} colors={[color2, color1]} style={styles.closeRouteCard}>
                                 <View style={styles.closeRouteName}>
                                     <View>
-                                        {Categories.find(vehicleCat => vehicleCat.name.toLowerCase() === vehicle.toLowerCase()).smIcon}
+                                        {categorySmIcon}
                                     </View>
                                     <Text style={styles.closeRouteText}>{closeRoute.vehicleName}</Text>
                                 </View>

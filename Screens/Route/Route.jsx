@@ -8,7 +8,7 @@ import styles from "./Styles";
 const Route = ({ route, navigation }) => {
     
     const price = "$2.00";
-
+    
     const { vehicleType, vehicleName, vehicleId, longitude, latitude, arrivesAt, color1, color2 } = route.params;
     
     const leavesAt = new Date(arrivesAt).getTime() + 1000 * 60 * 1;

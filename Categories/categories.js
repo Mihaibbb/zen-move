@@ -15,21 +15,24 @@ const Categories = [
         name: "Train",
         lightColor: "green",
         darkColor: "green2",
-        icon: <Ionicons name="ios-train-outline" size={50} color='#fff' style={styles.categoryIcon} />
+        icon: <Ionicons name="ios-train-outline" size={50} color='#fff' style={styles.categoryIcon} />,
+        smIcon: <Ionicons name="ios-train-outline" size={35} color='#fff' style={styles.categoryIcon} />
     },
 
     {
         name: "Tramway",
         lightColor: "yellow",
         darkColor: "yellow2",
-        icon: <MaterialIcons name="tram" size={50} color='#fff' style={styles.categoryIcon} />
+        icon: <MaterialIcons name="tram" size={50} color='#fff' style={styles.categoryIcon} />,
+        smIcon: <MaterialIcons name="tram" size={35} color='#fff' style={styles.categoryIcon} />
     },
 
     {
         name: "Taxi",
         lightColor: "purple",
         darkColor: "purple2",
-        icon: <FontAwesome5 name="taxi" size={50} color='#fff' style={styles.categoryIcon} />
+        icon: <FontAwesome5 name="taxi" size={50} color='#fff' style={styles.categoryIcon} />,
+        smIcon: <FontAwesome5 name="taxi" size={35} color='#fff' style={styles.categoryIcon} />
     }
 ];
 
